@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types = 1);
+
+use App\Console\Console;
+use Psr\Container\ContainerInterface;
+
+(function() {
+    /**@var $container ContainerInterface */
+    $container = include __DIR__ . '/bootstrap.php';
+
+    new Console($container)->run();
+})();
