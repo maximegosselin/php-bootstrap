@@ -4,7 +4,6 @@ namespace App\Web;
 
 use App\Service\CalculatorInterface;
 use App\Service\Operation;
-use App\Service\UnallowedOperationException;
 use App\Util\FloatUtil;
 use Laminas\Diactoros\Response\TextResponse;
 use Psr\Http\Message\ResponseInterface;
@@ -37,6 +36,6 @@ class CalcRequestHandler implements RequestHandlerInterface
             return new TextResponse($t->getMessage(), 400);
         }
 
-        return new TextResponse((string) $result);
+        return new TextResponse((string)$result);
     }
 }

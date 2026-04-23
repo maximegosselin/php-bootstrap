@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit>
+    <testsuites>
+        <testsuite name="Tests">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="ALLOW_ADD" value="true"/>
+        <env name="ALLOW_SUBTRACT" value="true"/>
+        <env name="ALLOW_MULTIPLY" value="true"/>
+        <env name="ALLOW_DIVIDE" value="true"/>
+    </php>
+</phpunit>
+

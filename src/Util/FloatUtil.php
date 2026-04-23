@@ -8,6 +8,6 @@ class FloatUtil
 {
     public static function from(mixed $value): ?float
     {
-        return filter_var($value, FILTER_VALIDATE_FLOAT);
+        return filter_var($value, FILTER_VALIDATE_FLOAT) ?: null;
     }
 }

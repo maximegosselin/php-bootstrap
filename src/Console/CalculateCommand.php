@@ -4,7 +4,6 @@ namespace App\Console;
 
 use App\Service\CalculatorInterface;
 use App\Service\Operation;
-use App\Service\UnallowedOperationException;
 use App\Util\FloatUtil;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;

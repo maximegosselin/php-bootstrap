@@ -14,9 +14,10 @@ $container = require __DIR__ . '/../bootstrap.php';
 AppFactory::setContainer($container);
 $app = AppFactory::create();
 $app->getRouteCollector()->setDefaultInvocationStrategy(new RequestHandler(true));
-$app->addBodyParsingMiddleware();
 $app->addRoutingMiddleware();
+$app->addErrorMiddleware(true, false, false);
+$app->addBodyParsingMiddleware();
 
-$app->get('/calc', $container->get(CalcRequestHandler::class));
+$app->get('/calc', CalcRequestHandler::class);
 
 $app->run();
