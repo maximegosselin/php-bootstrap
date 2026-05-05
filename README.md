@@ -1,5 +1,7 @@
 # php-bootstrap
 
+> Article: https://maximegosselin.com/posts/bootstrapping-a-frameworkless-php-application/
+
 A minimal PHP application that can be invoked in four different ways — web, CLI, script, and tests — all sharing a single bootstrap file.
 
 ## Requirements
@@ -31,7 +33,7 @@ Two implementation details are worth noting.
 **`include` can return a value.** `bootstrap.php` wraps everything in an immediately-invoked function expression (IIFE) and returns the container as its result. The caller captures it with a simple assignment:
 
 ```php
-$container = require __DIR__ . '/../bootstrap.php';
+$container = require 'path/to/bootstrap.php';
 ```
 
 **The IIFE keeps the global scope clean.** All intermediate variables (`$config`, `$dotenv`, etc.) live inside the anonymous function and are discarded once it returns. Nothing leaks into the global namespace.
